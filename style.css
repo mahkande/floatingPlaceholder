@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+  padding: 300px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.field input {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.field input:focus {
+  outline: 0;
+  border-color: rgb(21, 161, 216);
+}
+
+.field label::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 15px;
+  font-size: 14px;
+  color: #777;
+  line-height: 41px;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+
+.field input:valid + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background-color: white;
+  padding: 0 10px;
+  left: 6px;
+  color: rgb(21, 161, 216);
+  content: attr(data-title);
+}
+
+.field input:focus + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background-color: white;
+  padding: 0 10px;
+  left: 6px;
+}
